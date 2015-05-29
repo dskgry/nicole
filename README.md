@@ -94,7 +94,7 @@ Nicole.module("DatePicker", function () {
     });
 });
 ```
-- this.parameter(paramName,[dataType]): this function gives access to the parameters that where defined in JSF (see the "format" example above). This way you can use server-side defined parameters in your JavaScript-Code. The second parameter is optional. It allows you to cast the parameters into different types. Possible values are "int", "float","bool"
+- this.parameter(paramName,[dataType]): this function gives access to the parameters that where defined in JSF (see the "format" example above). This way you can use server-side defined parameters in your JavaScript-Code. The second parameter is optional. It allows you to cast a parameter into different types. Possible values are "int", "float","bool"
 
 
 
