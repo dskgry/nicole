@@ -1,4 +1,4 @@
-/*! nicole - v1.0.0 - 2015-02-19
+/*! nicole - v1.0.0 - 2015-05-13
 * Copyright (c) 2015 Sven Koelpin; Licensed MIT */
 (function (w, d) {
     "use strict";
