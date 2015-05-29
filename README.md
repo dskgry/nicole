@@ -1,5 +1,5 @@
 # nicole v 1.0
-Nicole is a JSF-JavaScript library which enables you to integrate your own JavaScript-code into a JSF-frontend in a clean and consistent way. 
+Nicole is a JSF-JavaScript library which enables you to integrate your own JavaScript-code into JSF in a clean and consistent way. 
 
 #Installation
 Build the project with maven (e.g. mvn clean install) and include nicole in the pom.xml of your project:
