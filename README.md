@@ -45,7 +45,7 @@ Nicole.module("SimpleExample", function () {
 });
 ```
 
-<b>IMPORTANT:</b> The modulename of your JavaScript-Module must match the modulename that was defined in the JSF-Page.
+<b>IMPORTANT:</b> The modulename of your JavaScript-Module must match the modulename that was defined in the JSF-Page. Otherwise you will get a "There is no js-module for the declared module"-Error. 
 
 <b>Usage of jQuery:</b>
 Nicole is also designed to work with jquery. When your JavaScript-Modules depend on jQuery, it is important that jQuery is included BEFORE nicole. To achieve this, include jQuery with target head or without any target.
