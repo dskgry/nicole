@@ -67,7 +67,7 @@ or for development.
 #Basic API
 Nicoles' JavaScript engine has two basic helper functions that make the interaction with JSF easier.
 
-- this.elm(domElId) and this.$elm(domElId): this function returns the DOM-Element for the given element-id. The function is more than a wrapper for   document.getElementById (resp. $(domElementId) when jQuery is present) because it takes care of JSFs' generated ID-prefixes (clientId). This is especially useful when writing composite-components. Example:
+- this.elm(domElId) and this.$elm(domElId): this function returns the DOM-Element (resp. the jQuery wrapped DOM-Element) for the given element-id. The function is more than a wrapper for document.getElementById (resp. $(domElementId) when jQuery is present) because it takes care of JSFs' generated ID-prefixes (clientId). This is especially useful when writing composite-components. Example:
 ```html
 <composite:interface>
     <composite:attribute name="value" type="java.util.Date"/>
@@ -94,6 +94,7 @@ Nicole.module("DatePicker", function () {
     });
 });
 ```
+- this.parameter(paramName,[dataType]): this function gives access to the parameters that where defined in JSF (see the "format" example above). This way you can use server-side defined parameters in your JavaScript-Code. The second parameter is optional. It allows you to cast the parameters into different types. Possible values are "int", "float","bool"
 
 
 
