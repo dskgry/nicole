@@ -67,7 +67,7 @@ or for development.
 #Basic API
 Nicoles' JavaScript engine has a few basic helper functions that make the interaction with JSF easier.
 
-- <b>this.elm(domElId)</b> and <b>this.$elm(domElId)</b>: this function returns the DOM-Element (resp. the jQuery wrapped DOM-Element) for the given element-id. The function is more than a wrapper for document.getElementById (resp. $(domElementId) when jQuery is present) because it takes care of JSFs' generated ID-prefixes (clientId). This is especially useful when writing composite-components. Example:
+- <b>this.elm(domElId)</b> and <b>this.$elm(domElId)</b>: this function returns the DOM-Element (resp. the jQuery wrapped DOM-Element when jQuery is present) for the given element-id. The function is more than a wrapper for document.getElementById because it takes care of JSFs' generated ID-prefixes (clientId). This is especially useful when writing composite-components. Example:
 ```html
 <composite:interface>
     <composite:attribute name="value" type="java.util.Date"/>
