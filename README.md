@@ -65,9 +65,9 @@ or for development.
 ```
 
 #Basic API
-Nicoles' JavaScript engine has two basic helper functions that make the interaction with JSF easier.
+Nicoles' JavaScript engine has a few basic helper functions that make the interaction with JSF easier.
 
-- this.elm(domElId) and this.$elm(domElId): this function returns the DOM-Element (resp. the jQuery wrapped DOM-Element) for the given element-id. The function is more than a wrapper for document.getElementById (resp. $(domElementId) when jQuery is present) because it takes care of JSFs' generated ID-prefixes (clientId). This is especially useful when writing composite-components. Example:
+- <b>this.elm(domElId)</b> and <b>this.$elm(domElId)</b>: this function returns the DOM-Element (resp. the jQuery wrapped DOM-Element) for the given element-id. The function is more than a wrapper for document.getElementById (resp. $(domElementId) when jQuery is present) because it takes care of JSFs' generated ID-prefixes (clientId). This is especially useful when writing composite-components. Example:
 ```html
 <composite:interface>
     <composite:attribute name="value" type="java.util.Date"/>
@@ -94,7 +94,31 @@ Nicole.module("DatePicker", function () {
     });
 });
 ```
-- this.parameter(paramName,[dataType]): this function gives access to the parameters that where defined in JSF (see the "format" example above). This way you can use server-side defined parameters in your JavaScript-Code. The second parameter is optional. It allows you to cast a parameter into different types. Possible values are "int", "float","bool"
+- <b>this.parameter(paramName,[dataType])</b>: this function gives access to the parameters that where defined in JSF (see the "format" example above). This way you can use server-side defined parameters in your JavaScript-Code. The second parameter is optional. It allows you to cast a parameter into different types. Possible values are "int", "float","bool"
+- <b>this.parameterHasValue(parameterName)</b>: checks if the given parameter name is present and has a value 
+
+#Advanced API
+
+- <b>this.ajax</b>: this function is a wrapper for JSFs' ajax api. It allows you to use simple ids instead of the full-qualified ids that you would normally have to use. Example:
+
+```javascript
+Nicole.module("SomeModuleWithAjax", function () {
+
+   this.$elm("someButton").on("click",function(){
+       this.ajax("elementIdA", {
+          execute: ["elementIdA","elementIdB"],
+          render: ["elementIdC"],
+          begin : function(){
+          },
+          complete : function(){
+          },
+          success: function () {
+          });
+   });
+  
+});
+
+ ```                      
 
 
 
