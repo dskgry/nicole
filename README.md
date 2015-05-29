@@ -47,6 +47,26 @@ Nicole.module("SimpleExample", function () {
 
 <b>IMPORTANT:</b> The modulename of your JavaScript-Module must match the modulename that was defined in the JSF-Page.
 
+<b>Usage of jQuery:</b>
+Nicole is also designed to work with jquery. When your JavaScript-Modules depend on jQuery, it is important that jQuery is included BEFORE nicole. To achieve this, include jQuery with target head or without any target.
+
+```html
+...
+<h:outputScript library="scripts" name="jquery.min.js" target="head"/>
+or
+<h:outputScript library="scripts" name="jquery.min.js"/>
+```
+You can also include the nicole scripts by hand:
+```html
+...
+<h:outputScript library="scripts" name="dist/nicole.min.js" />
+or for development.
+<h:outputScript library="scripts" name="dist/nicole.js" />
+```
+
+#API
+
+
 #Compatability
 Nicole works with all browsers >= IE 9
 
