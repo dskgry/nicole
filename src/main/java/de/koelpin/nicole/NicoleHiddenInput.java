@@ -51,7 +51,7 @@ public class NicoleHiddenInput extends HtmlInputHidden {
     writer.writeAttribute(ID, getFullJsfId(), null);
     writer.writeAttribute(TYPE, HIDDEN, null);
     for (Map.Entry<String, Object> dataEntry : dataAttributes.entrySet()) {
-      writer.writeAttribute(dataEntry.getKey(), dataEntry.getValue(), null);
+      writer.writeAttribute(dataEntry.getKey(), String.valueOf(dataEntry.getValue()), null);
     }
     writer.endElement(INPUT);
   }
